@@ -49,3 +49,11 @@ var str1="the";
 
 var batch=`Hello, ${str} to ${str1} class`;
 console.log(batch);
+
+var numberList={}
+
+var alphabets=["a","b","c","d","e","f","g","h"];
+
+for(var i=0;i<alphabets.length;i++){
+   console.log(alphabets[i]+ ":" + i);
+}
