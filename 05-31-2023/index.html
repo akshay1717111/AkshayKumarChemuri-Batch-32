@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<head>
+    <title>Object for Profile</title>
+    <style>
+        img{
+            width: 250px;
+            height: 250px;
+            border-radius: 50%; 
+        }
+       
+    </style>
+    <script>
+        //object created with my profile
+        //left side is key and right side values
+        var profile={
+            firstName: "Akshay Kumar",
+            lastName: "Chemuri",
+            dateOfBirth:"03/07/1998",
+            address: "2323 N woodlawn Blvd Apt 418",
+            birthCity:"Secunderabad",
+            education:"Master at Wichita State University",
+            overAllGpa: 4.0/4.0,
+            siblingName: "Ajay Kumar Chemuri",
+            experience:"Worked as a Software Engineer for 3 years",
+            hobbies:[{sportType:["cricket","swimming","football"]},{achievements:"played for JNTUH probables and for qualified hyderabad state team"}]
+
+        }
+
+        console.log(profile.hobbies[0].sportType[2]); // assignment question
+    
+    </script>
+</head>
+<body>
+    <img src="assets/AkshayChemuriphoto.jpg">
+</body>
+</html>
