@@ -57,3 +57,21 @@ var alphabets=["a","b","c","d","e","f","g","h"];
 for(var i=0;i<alphabets.length;i++){
    console.log(alphabets[i]+ ":" + i);
 }
+
+/*
+create a object about your profile  
+First name,last name, DOB, hobbies should array with object sport type, acheivements, ,
+
+
+display last hobbies in console.log and your display avatar or image in the page.
+
+
+with height 250px and width 250px and cricle image
+
+with minimum 10 fields 
+
+own photo in assets folder
+
+
+
+*/
