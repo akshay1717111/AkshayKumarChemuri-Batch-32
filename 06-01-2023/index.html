@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<head>
+    <title>
+        Akshay K chemuri assignment 3 
+    </title>
+</head>
+<body>
+    <h1>Assignment 3</h1>
+    <p> creating object</p>
+    <script>
+    /*Question: declare a variable and name as enviornments with value a
+    based on enivrn change the sending amount variable
+    for dev envi add 10 percent
+    for test envi add 20 percent
+    for stage add 30 percent
+    prod add 5 percent
+    and display sending amount */
+    var enivornment;
+    enivornment="test";
+    var sendingAmount=100;
+    /*if(enivornment == "developer"){
+        sendingAmount*=1.10;
+    }
+    else if(enivornment == "test"){
+        sendingAmount*=1.20;
+    }
+    else if(enivornment == "stage"){
+        sendingAmount*=1.30;
+    }
+    else if(enivornment == "prod"){
+        sendingAmount*=1.05;
+    }
+    else {
+        sendingAmount=sendingAmount;
+    }
+    console.log(sendingAmount); */
+
+     switch("prod"){
+        case "developer":
+        sendingAmount*=1.10;
+        break;
+        case "test":
+        sendingAmount*=1.20;
+        break;
+        case "stage":
+        sendingAmount*=1.20;
+        break;
+        case "prod":
+        sendingAmount*=1.05;
+        break;
+        default:
+        sendingAmount=sendingAmount;
+    }
+    console.log(sendingAmount); 
+    </script>
+</body>
+
+</html>
