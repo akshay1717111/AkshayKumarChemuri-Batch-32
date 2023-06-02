@@ -3,10 +3,32 @@
     <title>
         Akshay K chemuri assignment 3 
     </title>
+    <style>
+        body{
+            background-color: lightblue;
+        }
+        div{
+            text-align: center;
+        }
+        .buttonStyle{
+            border-radius: 20%;
+            width: 5%;
+            height: 20px;
+        }
+    </style>
 </head>
 <body>
     <h1>Assignment 3</h1>
     <p> creating object</p>
+    <div>
+        <button class="buttonStyle" onclick="theValue(this)" value="developer">developer</button>
+        <button class="buttonStyle" onclick="theValue(this)" value="test">test</button>
+
+        <button class="buttonStyle" onclick="theValue(this)" value="stage">stage</button>
+
+        <button class="buttonStyle" onclick="theValue(this)" value="prod">prod</button>
+        <p>The amount value is: <span id="getValue"></span></p>
+    </div>
     <script>
     /*Question: declare a variable and name as enviornments with value a
     based on enivrn change the sending amount variable
@@ -15,27 +37,27 @@
     for stage add 30 percent
     prod add 5 percent
     and display sending amount */
-    var enivornment;
-    enivornment="test";
+    function callForValue(enivornment){
+        alert(enivornment);
     var sendingAmount=100;
-    /*if(enivornment == "developer"){
-        sendingAmount*=1.10;
+    if(enivornment == "developer"){
+       return sendingAmount*=1.10;
     }
     else if(enivornment == "test"){
-        sendingAmount*=1.20;
+        return sendingAmount*=1.20;
     }
     else if(enivornment == "stage"){
-        sendingAmount*=1.30;
+        return sendingAmount*=1.30;
     }
     else if(enivornment == "prod"){
-        sendingAmount*=1.05;
+        return sendingAmount*=1.05;
     }
     else {
-        sendingAmount=sendingAmount;
+        return sendingAmount=sendingAmount;
     }
-    console.log(sendingAmount); */
-
-     switch("prod"){
+    return console.log(sendingAmount); 
+    }
+     /*switch(enivornment){
         case "developer":
         sendingAmount*=1.10;
         break;
@@ -50,8 +72,13 @@
         break;
         default:
         sendingAmount=sendingAmount;
-    }
-    console.log(sendingAmount); 
+    }  */
+    
+   function theValue(event){
+   var c= callForValue(event.innerText);
+   console.log(c); 
+   document.getElementById("getValue").innerHTML=c;
+   }
     </script>
 </body>
 
