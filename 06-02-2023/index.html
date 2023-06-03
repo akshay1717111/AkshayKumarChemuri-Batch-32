@@ -3,6 +3,15 @@
     <title>06-02-2023 Assignmet</title>
 </head>
 <body>
+    
+    <h3>
+        Assigment 4
+    </h3>
+    <h5>Array concepts</h5>
+    <p>new array:</p><span id="newArray"></span>
+    <p>added element to the array:</p><span id="addArray"></span>
+
+    <p>remove element from the array:</p><span id="removeArray"></span>
     <script>
         //display all items
         var hobbies=["cricket","football","tennis","videoGaming"];
@@ -12,12 +21,16 @@
             console.log(hobbies[i]);
         }
        }  
+       document.getElementById("newArray").innerHTML=hobbies;
        //for add function
        addMore(hobbies);
        function addMore(item){
-        item.push("baseball");
+        item.splice(2,0,"acting");
+        //item.push("baseball");
        }
        console.log(hobbies);
+       document.getElementById("addArray").innerHTML=hobbies;
+
        //for delete function
        deleteItem(hobbies, 2);
        function deleteItem(arr, index){
@@ -25,6 +38,9 @@
        //splice has two parameters 1st is the index value and next till how many elementts are removed
        }
        console.log(hobbies);
+              document.getElementById("addArray").innerHTML=hobbies;
+
     </script>
 </body>
+
 </html>
