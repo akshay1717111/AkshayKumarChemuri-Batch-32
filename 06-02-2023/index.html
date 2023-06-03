@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<head>
+    <title>06-02-2023 Assignmet</title>
+</head>
+<body>
+    <script>
+        //display all items
+        var hobbies=["cricket","football","tennis","videoGaming"];
+        displayList(hobbies);
+       function displayList(values){
+        for(var i=0;i<hobbies.length;i++){
+            console.log(hobbies[i]);
+        }
+       }  
+       //for add function
+       addMore(hobbies);
+       function addMore(item){
+        item.push("baseball");
+       }
+       console.log(hobbies);
+       //for delete function
+       deleteItem(hobbies, 2);
+       function deleteItem(arr, index){
+       arr.splice(index,1);
+       //splice has two parameters 1st is the index value and next till how many elementts are removed
+       }
+       console.log(hobbies);
+    </script>
+</body>
+</html>
