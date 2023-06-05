@@ -19,25 +19,33 @@
         displayList(hobbies);
        function displayList(values){
         for(var i=0;i<hobbies.length;i++){
-            console.log(hobbies[i]);
+            //console.log(hobbies[i]);
         }
        }  
+       console.log(hobbies);
        document.getElementById("newArray").innerHTML=hobbies;
        //for add function
-       addMore(hobbies);
+       addMore("acting");
        function addMore(item){
-        item.splice(2,0,"acting");
+        hobbies.splice(2,0,item);
         //item.push("baseball");
        }
        console.log(hobbies);
        document.getElementById("addArray").innerHTML=hobbies;
 
        //for delete function
-       deleteItem(hobbies, 2);
-       function deleteItem(arr, index){
-       arr.splice(index,1);
+       deleteItem("videoGaming");
+       function deleteItem(value){
+        for(var j=0;j<hobbies.length;j++){
+            if(hobbies[j] == value){
+                hobbies.splice(j,1);
+            }
+        }
+    }
+       //function deleteItem(arr, index){
+       //arr.splice(index,1);
        //splice has two parameters 1st is the index value and next till how many elementts are removed
-       }
+      // }
        console.log(hobbies);
               document.getElementById("addArray").innerHTML=hobbies;
 
