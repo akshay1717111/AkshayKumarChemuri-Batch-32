@@ -1,0 +1,52 @@
+<html>
+<head>
+    <title>DOM Assignmet</title>
+    <style>
+        .changeStyle{
+            margin: 20px;
+            margin-right: 20px;
+        }
+    </style>
+</head>
+<body>
+    <script>
+            function submit(){
+                var a=document.getElementById("fname").value;
+                var b=document.getElementById("lname").value;
+                var c=document.getElementById("DOB").value;
+                var d=document.getElementById("email").value;
+                var e=document.getElementById("DOB").value;
+                var f=document.getElementById("address").value;
+
+                document.getElementById("fname1").innerHTML=a
+               document.getElementById("lname1").innerHTML=b;
+               document.getElementById("DOB1").innerHTML=c;
+               document.getElementById("email1").innerHTML=d;
+               document.getElementById("DOB1").innerHTML=e;
+                 document.getElementById("address1").innerHTML=f;
+         }
+    </script>
+    <label>FristName:</label>
+    <input type="text" id="fname" class="changeStyle"> <br>
+    <label>LastName:</label>
+    <input type="text" id="lname" class="changeStyle"><br>
+    <label>Date of Birth:</label>
+    <input type="date" id="DOB" class="changeStyle"><br>
+    <label>Email:</label>
+    <input type="email" id="email" class="changeStyle"><br>
+    <label>Phone Number</label>
+    <input type="number" id="phonenumber" class="changeStyle"><br>
+    <label>Address</label>
+    <input type="textarea" id="address" class="changeStyle"><br>
+    <button onclick="submit()">Submit info</button>
+    
+    <br>
+    <p id="fname1"></p>
+    <p id="lname1"></p>
+    <p id="DOB1"></p>
+    <p id="email1"></p>
+    <p id="phonenumber1"></p>
+    <p id="address1"></p>
+
+</body>
+</html>
