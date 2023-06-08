@@ -1,6 +1,6 @@
 Array.prototype.sortMethod = function(){
-    //  var c= this[1];
-    //return c;
+    //  var c= this[1]; //basic approach
+    //return c; //basic approach
             var newArr=[];
             for (var i = 0; i < this.length; i++)   
                {  
@@ -20,7 +20,7 @@ Array.prototype.sortMethod = function(){
         }
        
     myArray = [11,234,1,89,34,546,32];
-    // myArray.sort();
+    // myArray.sort();  //basic approach
     console.log(myArray.sortMethod());
     
     //
