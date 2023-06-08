@@ -4,7 +4,10 @@
     <title>HTML JavaScript output on same page</title>
     
     <script type="text/JavaScript">
-        const arr=[];
+        var arr=[];
+        if(arr.length > 0) {
+            arr.pop();
+        }
         function showMessage(){
                   //getting values
                   var a=document.getElementById("fname").value;
@@ -24,15 +27,24 @@
                    document.getElementById("hoobies").innerHTML=arr;
                  
            }
-        function check(checked){
-           arr.push(checked.value)
+        function check(val){
+            if (val.checked) {
+                console.log(val.checked);
+                arr.push(val.value)
                 return arr;
+              } else {
+               return arr;
+              }
         }
     </script>
     <style>
         input{
                 margin: 25px;
         }
+        /*
+create an prototype method on an array or on an object to return second smallest value.
+create a custom sort on an array to return second smallest value.
+ */
     </style>
 </head>
 <body>
