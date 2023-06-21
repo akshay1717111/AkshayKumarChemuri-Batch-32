@@ -1,0 +1,11 @@
+.inline-list li {
+    display: inline;
+  }
+  li{
+    padding: 50px;
+  }
+  ul{
+    height: 30px !important;
+    background-color: aquamarine;
+  }
+  
