@@ -1,4 +1,4 @@
-import { Component,EventEmitter, Output } from '@angular/core';
+import { Component,EventEmitter, Input, Output } from '@angular/core';
 import { Router } from '@angular/router';
 import { AuthService1 } from '../Auth/auth.service';
 
@@ -9,7 +9,7 @@ import { AuthService1 } from '../Auth/auth.service';
 })
 export class LoginComponent {
   
-@Output() sendLoginvalue=new EventEmitter();
+@Input() sendLoginvalue=new EventEmitter<boolean>();
 constructor(private route:Router, private aService: AuthService1){}
  loginDetails={
   email:'',
@@ -22,16 +22,14 @@ ngOninit(){
   login(){
     if (this.loginDetails.email === 'a@a.com' &&
     this.loginDetails.password === '12345') {
-      console.log('user Authenticatesd');
+     
       this.aService.isLoggedIn = true;
-      console.log(this.aService.isLoggedIn)
+      
       this.sendLoginvalue.emit(this.aService.isLoggedIn);
        
       this.route.navigate(['/profile']);
   } else {
-    console.log('user NOT Authenticatesd');
     this.aService.isLoggedIn = false;
-    console.log(this.aService.isLoggedIn)
     this.sendLoginvalue.emit(this.aService.isLoggedIn);
    alert('InValid details!!!')
   }

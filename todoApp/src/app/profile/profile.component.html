@@ -2,6 +2,8 @@
 <p>FirstName: <strong>{{ details.firstName }}</strong></p>
 <p>LastName: <strong>{{ details.lastName }}</strong></p>
 <p>Email: <strong> {{ details.email }}</strong></p>
+<p><strong>{{ details.greeting }}</strong></p>
 <app-card-details (selectedValue)="selectedContent($event)" [cardDetails]="details.cardDetails"></app-card-details>
+<button (click)="logout()">logout</button>
 </div>
   
