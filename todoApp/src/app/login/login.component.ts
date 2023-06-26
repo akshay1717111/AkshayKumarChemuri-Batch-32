@@ -11,6 +11,7 @@ export class LoginComponent {
   
 @Input() sendLoginvalue=new EventEmitter<boolean>();
 constructor(private route:Router, private aService: AuthService1){}
+isDirty = false;
  loginDetails={
   email:'',
   password:''
@@ -24,16 +25,26 @@ ngOninit(){
     this.loginDetails.password === '12345') {
      
       this.aService.isLoggedIn = true;
+      this.aService.islogged.next(!this.aService.islogged.value);
       
       this.sendLoginvalue.emit(this.aService.isLoggedIn);
        
       this.route.navigate(['/profile']);
   } else {
     this.aService.isLoggedIn = false;
+    this.aService.islogged.next(false);
     this.sendLoginvalue.emit(this.aService.isLoggedIn);
    alert('InValid details!!!')
   }
 
   }
-  
+  onInputChange(){
+    this.isDirty = true;
+  }
+  canDeactivate(): boolean {
+    if (this.isDirty) {
+      return confirm('Are you sure you want to leave this page? Your changes will be lost.');
+    }
+    return true;
+  }
 }

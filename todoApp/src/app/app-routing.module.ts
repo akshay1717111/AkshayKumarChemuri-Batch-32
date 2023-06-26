@@ -5,7 +5,7 @@ import { LoginComponent } from './login/login.component';
 import { ProfileComponent } from './profile/profile.component';
 import { AuthService } from './guards/auth.service';
 
-const routes: Routes = [{path:'signup',component:SignupComponent},{path:'login',component:LoginComponent}
+const routes: Routes = [{path:'signup',component:SignupComponent},{path:'login',component:LoginComponent, canDeactivate:[AuthService]}
 ,{path:'profile',component: ProfileComponent, canActivate: [AuthService]}];
 
 @NgModule({
