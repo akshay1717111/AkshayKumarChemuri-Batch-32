@@ -20,6 +20,7 @@ canActivate(){
     }
     return true;
 }
+//deactivate method 
 canDeactivate(component: LoginComponent): Observable<boolean> | Promise<boolean> | boolean {
   if (component.canDeactivate) {
     // If the component has a 'canDeactivate' method, call it
